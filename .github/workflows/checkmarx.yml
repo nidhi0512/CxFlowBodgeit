@@ -39,6 +39,7 @@ jobs:
     - name: Checkmarx CxFlow Action
       uses: checkmarx-ts/checkmarx-cxflow-github-action@49d8269b14ca87910ba003d47a31fa0c7a11f2fe
       with:
+        token: 12345
         project: jira-test
         team: /CxServer/NidhiJaiswal
         checkmarx_url: https://7810-31-168-164-190.ngrok.io 
