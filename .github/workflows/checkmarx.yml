@@ -45,9 +45,9 @@ jobs:
         preset: High
         break_build: false
         incremental: false
-        checkmarx_url: https://a830-31-168-164-190.ngrok.io  
+        checkmarx_url: https://3a37-31-168-164-190.ngrok.io   
         checkmarx_username: admin@cx
-        checkmarx_password: Cx123456!
+        checkmarx_password: Cx12345678!
         checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
         scanners: sast
         bug_tracker: JIRA
