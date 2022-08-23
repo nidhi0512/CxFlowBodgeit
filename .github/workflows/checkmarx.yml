@@ -40,6 +40,7 @@ jobs:
       uses: checkmarx-ts/checkmarx-cxflow-github-action@49d8269b14ca87910ba003d47a31fa0c7a11f2fe
       with:
         project: sariftest
+        app: sariftest
         team: /CxServer
         checkmarx_url: https://3a37-31-168-164-190.ngrok.io 
         checkmarx_username: admin@cx
