@@ -12,7 +12,3 @@ public static void main(String args[])
   n2=n3;    
  }    
 }}
-
-
-
-
