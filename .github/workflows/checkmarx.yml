@@ -41,13 +41,13 @@ jobs:
       with:
         project: sarifTests
         team: /CxServer
-        checkmarx_url: https://3a37-31-168-164-190.ngrok.io 
+        checkmarx_url: http://0581-31-168-164-190.ngrok.io
         checkmarx_username: admin@cx
         checkmarx_password: Cx12345678!
         checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
-        break_build: false
+        break_build: true
         bug_tracker: Sarif
-        scanners: sast
+        scanners: sast, sca
         params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true --repo-url=${{ github.event.repository.url }}
     # Upload the Report for CodeQL/Security Alerts
     - name: Upload SARIF file
