@@ -41,16 +41,26 @@ jobs:
       with:
         project: sarifTests
         team: /CxServer
-        checkmarx_url: http://168f-31-168-164-190.ngrok.io
+        checkmarx_url: http://2a29-31-168-164-190.ngrok.io
         checkmarx_username: admin@cx
         checkmarx_password: Cx12345678!
         checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
         break_build: true
-        bug_tracker: Sarif
+        bug_tracker_impl: JIRA
+        jira_url: https://nidhikjaiswal.atlassian.net/
+        jira_username: jaiswal.nidhi0512@gmail.com
+        jira_token: CLX6MkcHiQv93SXkmnGa7009
+        jira_issue_type: 'Bug'
+        jira_open_transition: 'In Progress'
+        jira_close_transition: 'Done'
+        jira_open_status: 'In Progress, In Review'
+        jira_closed_status: 'Done'
+        github_token: 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
+        jira_project: 'APPSEC'
         scanners: sast
         params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true --repo-url=${{ github.event.repository.url }}
     # Upload the Report for CodeQL/Security Alerts
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        sarif_file: cx.sarif
+   # - name: Upload SARIF file
+   #   uses: github/codeql-action/upload-sarif@v2
+    #  with:
+    #    sarif_file: cx.sarif
