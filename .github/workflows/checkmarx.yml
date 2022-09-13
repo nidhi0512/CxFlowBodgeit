@@ -41,7 +41,7 @@ jobs:
       with:
         project: Test1
         team: /CxServer/NidhiJaiswal
-        checkmarx_url: http://c7d3-31-168-164-190.ngrok.io
+        checkmarx_url: http://e9d6-31-168-164-190.ngrok.io
         checkmarx_username: admin@cx
         checkmarx_password: Cx12345678!
         checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
@@ -52,7 +52,7 @@ jobs:
         bug_tracker_impl: JIRA
         jira_url: https://nidhikjaiswal.atlassian.net/
         jira_username: jaiswal.nidhi0512@gmail.com
-        jira_token: 6ZiqPjpBwJIayadKl8P2C58A
+        jira_token: RDm6BfRLY47l0OtJsuQp6FE8
         jira_issue_type: 'Bug'
         jira_open_transition: 'In Progress'
         jira_close_transition: 'Done'
