@@ -45,7 +45,8 @@ jobs:
         checkmarx_username: admin@cx
         checkmarx_password: Cx12345678!
         checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
-        break_build: true
+        #break_build: true
+        bug_tracker: JIRA
         bug_tracker_impl: JIRA
         jira_url: https://nidhikjaiswal.atlassian.net/
         jira_username: jaiswal.nidhi0512@gmail.com
@@ -58,7 +59,7 @@ jobs:
         github_token: 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
         jira_project: 'APPSEC'
         scanners: sast
-        params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true --repo-url=${{ github.event.repository.url }}
+        params: --logging.level.com.checkmarx.flow.custom=debug --logging.level.com.checkmarx.flow.service=debug --logging.level.com.checkmarx.flow.utils=debug --logging.level.com.checkmarx.sdk.service=debug --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --repo-name=CxFlowBodgeit --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true --repo-url=${{ github.event.repository.url }}
     # Upload the Report for CodeQL/Security Alerts
    # - name: Upload SARIF file
    #   uses: github/codeql-action/upload-sarif@v2
