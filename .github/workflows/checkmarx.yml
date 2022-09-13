@@ -59,7 +59,7 @@ jobs:
         jira_open_status: 'In Progress, In Review'
         jira_closed_status: 'Done'
         github_token: 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
-        jira_project: 'APPSEC'
+        jira_project: APPSEC
         scanners: sast
         params: --logging.level.com.checkmarx.flow.custom=debug --logging.level.com.checkmarx.flow.service=debug --logging.level.com.checkmarx.flow.utils=debug --logging.level.com.checkmarx.sdk.service=debug --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --repo-name=CxFlowBodgeit --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true --repo-url=${{ github.event.repository.url }}
     # Upload the Report for CodeQL/Security Alerts
