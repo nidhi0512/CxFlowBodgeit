@@ -54,7 +54,7 @@ jobs:
         bug_tracker_impl: JIRA
         jira_url: https://nidhikjaiswal.atlassian.net/
         jira_username: jaiswal.nidhi0512@gmail.com
-        jira_token: RDm6BfRLY47l0OtJsuQp6FE8
+        jira_token: j5Iyo6vOb43OhyI0XDQk74A8
         jira_issue_type: 'Bug'
         jira_open_transition: 'In Progress, In Review'
         jira_close_transition: 'Done'
