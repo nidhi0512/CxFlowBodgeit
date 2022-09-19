@@ -39,13 +39,13 @@ jobs:
     - name: Checkmarx CxFlow Action
       uses: nidhi0512/checkmarx-cxflow-github-action@ba5cec16b01e4a3cdea681a4fbada6ccbaa2fe25
       with:
-        checkmarx_url: http://ecfb-2401-4900-36bd-65e0-359f-89cb-23e2-f18a.ngrok.io
+        checkmarx_url: http://7a42-2401-4900-384d-5303-2ccf-dc2-4123-34f1.ngrok.io
         team: "/CxServer"
         checkmarx_username: admin@cx
         checkmarx_password: Cx12345678!
         checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
-        project: TESTCXFLOW
-        app: TESTCXFLOW
+        project: TESTCXFLOW1
+        app: TESTCXFLOW1
         preset: Checkmarx Default
         break_build: false
         incremental: false
@@ -64,7 +64,7 @@ jobs:
         jira_project: 'APPSEC'
         scanners: sast
         jira_label-prefix: 'Bug'
-        params: --logging.level.com.checkmarx.flow.custom=debug --logging.level.com.checkmarx.flow.service=debug --logging.level.com.checkmarx.flow.utils=debug --logging.level.com.checkmarx.sdk.service=debug --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --logging.level.org.apache.http.client.protocol=ERROR --cx-flow.zip-exclude="\.git/.*,\.github/.*" --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true 
+        params: --logging.level.com.checkmarx.flow.custom=debug --logging.level.com.checkmarx.flow.service=debug --logging.level.com.checkmarx.flow.utils=debug --logging.level.com.checkmarx.sdk.service=debug --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --logging.level.org.apache.http.client.protocol=ERROR --cx-flow.zip-exclude="\.git\.*,\.src\.*" --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true 
     - name: Archive Checkmarx Results
       uses: actions/upload-artifact@v2
       with:
