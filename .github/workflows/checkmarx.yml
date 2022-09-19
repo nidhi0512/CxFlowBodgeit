@@ -50,8 +50,8 @@ jobs:
         break_build: false
         incremental: false
         filter_severity: high, medium, low
-        bug_tracker: JIRA
-        bug_tracker_impl: JIRA
+        bug_tracker: Sarif
+        bug_tracker_impl: Sarif
         jira_url: https://nidhikjaiswal.atlassian.net/
         jira_username: jaiswal.nidhi0512@gmail.com
         jira_token: IwaozdZ7Zu0pyIdndRsh4B61
