@@ -37,33 +37,31 @@ jobs:
     - uses: actions/checkout@v3
     # Runs the Checkmarx Scan leveraging the latest version of CxFlow - REFER to Action README for list of inputs
     - name: Checkmarx CxFlow Action
-      uses: "nidhi0512/checkmarx-cxflow-github-action@ba5cec16b01e4a3cdea681a4fbada6ccbaa2fe25"
+      uses: nidhi0512/checkmarx-cxflow-github-action@ba5cec16b01e4a3cdea681a4fbada6ccbaa2fe25
       with:
-        project: CxTest1
-        team: /CxServer/NidhiJaiswal
-        checkmarx_url: http://e9d6-31-168-164-190.ngrok.io
+        checkmarx_url: http://b423-2401-4900-36bd-65e0-a5b5-a46b-ca6e-1d8c.ngrok.io
+        team: "/CxServer"
         checkmarx_username: admin@cx
         checkmarx_password: Cx12345678!
         checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
-        checkmarx_preset: Checkmarx Default
-        checkmarx_incremental: false
+        project: TESTCXFLOW
+        app: TESTCXFLOW
+        preset: Checkmarx Default
         break_build: false
+        incremental: false
+        filter_severity: high, medium, low
         bug_tracker: JIRA
         bug_tracker_impl: JIRA
         jira_url: https://nidhikjaiswal.atlassian.net/
         jira_username: jaiswal.nidhi0512@gmail.com
         jira_token: RDm6BfRLY47l0OtJsuQp6FE8
-        jira_project: 'APPSEC'
         jira_issue_type: 'Bug'
-        jira_open_transition: 'In Progress'
+        jira_open_transition: 'In Progress, In Review'
         jira_close_transition: 'Done'
-        jira_open_status: 'In Progress, In Review'
+        jira_open_status: 'To Do, In Progess, In Review'
         jira_closed_status: 'Done'
-        github_token: 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
+        github_token: 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
+        jira_project: 'APPSEC'
         scanners: sast
-        params: --logging.level.com.checkmarx.flow.custom=debug --logging.level.com.checkmarx.flow.service=debug --logging.level.com.checkmarx.flow.utils=debug --logging.level.com.checkmarx.sdk.service=debug --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --repo-name=CxFlowBodgeit --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true --repo-url=${{ github.event.repository.url }}
-    # Upload the Report for CodeQL/Security Alerts
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        sarif_file: cx.sarif
+        jira_label-prefix: 'Bug'
+        params: --logging.level.com.checkmarx.flow.custom=debug --logging.level.com.checkmarx.flow.service=debug --logging.level.com.checkmarx.flow.utils=debug --logging.level.com.checkmarx.sdk.service=debug --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --logging.level.org.apache.http.client.protocol=ERROR
