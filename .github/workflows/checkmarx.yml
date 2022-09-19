@@ -39,7 +39,7 @@ jobs:
     - name: Checkmarx CxFlow Action
       uses: nidhi0512/checkmarx-cxflow-github-action@ba5cec16b01e4a3cdea681a4fbada6ccbaa2fe25
       with:
-        checkmarx_url: http://0850-2401-4900-36bd-65e0-a5b5-a46b-ca6e-1d8c.ngrok.io
+        checkmarx_url: http://ecfb-2401-4900-36bd-65e0-359f-89cb-23e2-f18a.ngrok.io
         team: "/CxServer"
         checkmarx_username: admin@cx
         checkmarx_password: Cx12345678!
