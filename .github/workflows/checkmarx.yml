@@ -64,7 +64,7 @@ jobs:
         jira_project: 'APPSEC'
         scanners: sast
         jira_label-prefix: 'Bug'
-        params: --logging.level.com.checkmarx.flow.custom=debug --logging.level.com.checkmarx.flow.service=debug --logging.level.com.checkmarx.flow.utils=debug --logging.level.com.checkmarx.sdk.service=debug --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --logging.level.org.apache.http.client.protocol=ERROR --cx-flow.zip-exclude="\.git\/.*,\.github\/.*,\.png\*" --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true 
+        params: --logging.level.com.checkmarx.flow.custom=debug --logging.level.com.checkmarx.flow.service=debug --logging.level.com.checkmarx.flow.utils=debug --logging.level.com.checkmarx.sdk.service=debug --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --logging.level.org.apache.http.client.protocol=ERROR --cx-flow.zip-exclude="\.git\/.*,\.github\/.*,\.png\*," --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true 
     - name: Archive Checkmarx Results
       uses: actions/upload-artifact@v2
       with:
