@@ -70,7 +70,6 @@ jobs:
       with:
           name: checkmarx-scan-results
           path: cx.sarif
-
     - name: Upload Checkmarx SARIF File
       uses: github/codeql-action/upload-sarif@v2
       with:
