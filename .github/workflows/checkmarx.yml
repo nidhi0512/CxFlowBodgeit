@@ -41,8 +41,8 @@ jobs:
       with:
         checkmarx_url: http://f637-31-168-164-190.ngrok.io
         team: "/CxServer"
-        checkmarx_username: admin@cx
-        checkmarx_password: Cx12345678
+        checkmarx_username: admin@cx1
+        checkmarx_password: Cx12345678!
         checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
         project: TESTCXFLOW1
         app: TESTCXFLOW1
